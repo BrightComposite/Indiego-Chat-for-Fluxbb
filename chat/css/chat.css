@@ -1,0 +1,326 @@
+/*  Содержимое чата  */
+
+#indiego-chat td
+{
+    padding: 0 !important;
+}
+
+#indiego-chat .contents
+{
+    display: block;
+    overflow: auto;
+
+    height: 306px;
+    max-height: 306px;
+    padding: 8px 2px 0 8px;
+    
+    vertical-align: top;
+}
+
+#indiego-chat .message
+{
+    display: table;
+    width: 100%;
+}
+
+#indiego-chat .message:last-of-type
+{
+    margin-bottom: 12px;
+}
+
+#indiego-chat .message > *
+{
+    vertical-align: middle;
+}
+
+#indiego-chat .message img
+{
+    margin: 0 1px !important;
+}
+
+#indiego-chat .message .nick
+{
+    font-weight: bold;
+}
+
+#indiego-chat .message .admin
+{
+    color: #f00;
+}
+
+#indiego-chat .message .moderator
+{
+    color: #080;
+}
+
+#indiego-chat .message .ownnick
+{
+    font-weight: bold;
+    color: #fa0;
+}
+
+#indiego-chat .message .edit_msg,
+#indiego-chat .message .delete_msg
+{
+    float: right;
+    margin: 0 2px;
+    width: 16px;
+    height: 16px;
+    
+    cursor: pointer;
+}
+
+#indiego-chat .message .edit_msg
+{
+    background: url(../images/edit.png);
+}
+
+#indiego-chat .message .delete_msg
+{
+    background: url(../images/delete.png);
+}
+
+/*  Панелька чата  */
+
+#indiego-chat .toolbar
+{
+    /*padding: 8px;*/
+    display: table;
+    width: 100%;
+}
+
+#indiego-chat .toolbar > *
+{
+    vertical-align: middle;
+}
+
+/*  Элементы панели  */
+
+#message-input
+{
+    width: 50%;
+    margin-right: 8px;
+}
+
+#message-sender
+{
+    min-width: 80px;
+    margin-right: 8px;
+}
+
+.chat-controls
+{
+    float: right;
+    display: inline-block;
+    margin-top: -1px !important;
+    max-height: 24px;
+    width: auto;
+}
+
+.chat-control
+{
+    display: inline-block;
+    
+    margin: 0 1px !important;
+    border: 1px solid #d9e1e7 !important;
+    outline: none !important;
+    
+    width: 22px;
+    height: 22px;
+}
+
+.chat-control:hover
+{
+    border-color: #b7c0c5 !important;
+}
+
+.chat-control:first-of-type
+{
+    margin-left: 0 !important;
+}
+
+.chat-control:last-of-type
+{
+    margin-right: 0 !important;
+}
+
+.chat-control.focus
+{
+    border-color: #b7c0c5 !important;
+}
+
+.chat-control > .back
+{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ebf1f5;
+    z-index: 1;
+    margin-top: 0px !important;
+}
+
+.chat-control.focus > .back
+{
+    height: 24px;
+    margin-top: -2px !important;
+    z-index: 3;
+}
+
+.chat-control > .panel
+{
+    display: none;
+    position: absolute;
+    padding: 8px !important;
+    border: 1px solid #b7c0c5;
+    background: #ebf1f5;
+    
+    min-height: 16px;
+}
+
+.chat-control > .panel > *
+{
+    vertical-align: middle;
+}
+
+.chat-control.focus > .panel
+{
+    display: block;
+    z-index: 2;
+}
+
+.chat-control > .image
+{
+    float: left;
+    position: absolute;
+    margin: 3px !important;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+}
+
+.chat-control.focus > .image
+{
+    z-index: 3;
+}
+
+#indiego-chat-smiles > .panel
+{
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 4px !important;
+    padding-right: 0 !important;
+}
+
+#indiego-chat-smiles > .panel > *
+{
+    display: inline-block;
+    border: 1px solid #ebf1f5;
+    padding: 2px !important;
+    cursor: pointer;
+}
+
+#indiego-chat-smiles > .panel > *:hover
+{
+    border-color: #b7c0c5 !important;
+}
+
+#indiego-chat-bb > .panel
+{
+    padding: 4px 2px !important;
+}
+
+#indiego-chat-bb > .panel > *
+{
+    display: inline-block;
+    margin: 0 2px !important;
+    padding: 2px !important;
+    border: 1px solid #d9e1e7;
+    cursor: pointer;
+}
+
+#indiego-chat-bb > .panel > *:hover
+{
+    border-color: #b7c0c5 !important;
+}
+
+#indiego-chat-colors > .panel
+{
+    padding: 4px 2px !important;
+}
+
+#indiego-chat-colors > .panel > *
+{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 0 2px !important;
+    padding: 2px !important;
+    border: 1px solid #d9e1e7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#indiego-chat-colors > .panel > *:hover
+{
+    border-color: #b7c0c5 !important;
+}
+
+#indiego-chat-settings > .panel
+{
+    padding: 5px 8px !important;
+}
+
+#indiego-chat-settings > .panel > *
+{
+    display: table;
+    margin: 2px auto !important;
+    font-size: 10px;
+    /*width: 100%;*/
+}
+
+#indiego-chat-help > .panel
+{
+    width: 270px;
+}
+
+#indiego-chat-help > .panel > .border
+{
+    border: 1px solid #d9e1e7;
+    padding: 8px !important;
+    background: #fff;
+}
+
+#indiego-chat-help > .panel > .border > *
+{
+    display: table;
+    margin: 2px auto !important;
+    text-align: center;
+}
+
+#indiego-chat-smiles > .image
+{
+    background-image: url(../images/smile.png);
+}
+
+#indiego-chat-bb > .image
+{
+    background-image: url(../images/b.png);
+}
+
+#indiego-chat-colors > .image
+{
+    background-image: url(../images/color.png);
+}
+
+#indiego-chat-settings > .image
+{
+    background-image: url(../images/settings.png);
+}
+
+#indiego-chat-help > .image
+{
+    background-image: url(../images/help.png);
+}
